@@ -16,7 +16,4 @@ class Article < ActiveRecord::Base
     end
   end
 
-  def to_param
-    token
-  end
 end

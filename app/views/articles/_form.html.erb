@@ -1,3 +1,11 @@
+<% if article.errors && article.errors.size > 0  %>
+	<div class="errors">
+	  <% article.errors.each do |key, value| %>
+	     <%= "#{key} has error #{value}" %>
+	  <% end %>
+	</div>
+<% end %>
+
 <%= form_for [category, article] do |f| %>
  <div>
   <%= f.label :title %>
