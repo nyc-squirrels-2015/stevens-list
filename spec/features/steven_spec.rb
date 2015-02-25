@@ -1,8 +1,10 @@
 require 'rails_helper'
 
-describe 'home page' do
-  it 'welcomes the user' do
-    visit '/'
-    page.should have_content('Welcome')
+describe 'category index page' do
+
+  it 'shows the category list' do
+    visit '/categories'
+    expect(page).to have_selector('#categories_table')
   end
+  
 end

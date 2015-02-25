@@ -1,4 +1,4 @@
-<table>
+<table id="categories_table">
  <tr>
 	 <th>Name</th>
 	 <th>Description</th>
@@ -6,7 +6,7 @@
  </tr>
 <% @categories.each do |category| %>
  <tr>
-	 <td> <%= link_to category.name, category %> </td>
+	 <td> <%= link_to category.name, category, html:{ class: 'cat_link' } %> </td>
 	 <td> <%= category.description %> </td>
 	 <td></td>
  </tr>
