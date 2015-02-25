@@ -1,6 +1,11 @@
 <h1><%= @category.name %></h1>
 <%= @category.description %>
 
+<h2>As collection</h2>
+
+<%= render partial: 'article', collection: @category.articles %>
+
+<h2>Explicit enumerator collection</h2>
 
 <% @category.articles.each do |article| %>
   <%= render partial:'article', locals:{ article:article } %>
