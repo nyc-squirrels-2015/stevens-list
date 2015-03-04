@@ -1,4 +1,4 @@
-<table id="categories_table">
+<table id="categories_table" data-purpose="category_list">
  <tr>
 	 <th>Name</th>
 	 <th>Description</th>
@@ -13,3 +13,12 @@
 
 <% end %>
 </table>
+<h2>Add a category</h2>
+<%= form_for @category do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+<%= f.submit 'Save' %>
+<% end %>
